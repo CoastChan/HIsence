@@ -1,0 +1,111 @@
+
+.wrap{
+    width: 1188px;
+    margin: 0 auto;
+}
+.footer-wrap{
+    background: #fff;
+}
+.footer{
+    height: 410px;
+}
+.footer .imager{
+    width: 1188px;
+}
+
+.footer .imager img{
+    float: left;
+    width: 297px;
+}
+.more{
+    height: 195px;
+}
+.more div {
+    float: left;
+    width: 160px;
+    margin-top: 5px;
+}
+.more div dt{
+    font-size: 16px;
+    color: #262626;
+    line-height: 22px;
+    margin-bottom: 12px;
+  
+}
+.more div dd{
+    font-size: 14px;
+    color: #777777;
+    margin-top: 8PX;
+    line-height: 18px;
+}
+
+.more .code{
+    width: 228px;
+    text-align: center;
+}
+.more .code h3{
+    font-size: 24px;
+    color: #00AAA6;
+    line-height: 32px;
+  
+}
+.more .code P{
+    font-size: 14px;
+    line-height: 18px;
+    color: #777777;
+    margin-top: 4px;
+}
+.more .code img {
+    width: 100px;
+    margin-top: 16px;
+    margin-bottom: 4px;
+
+}
+/* copy start */
+.copy-wrap{
+    background-color: #1e1e1e;
+}
+.copy{
+    height: 60px;
+    line-height: 60px;
+  
+}
+.copy div {
+    float: left;
+}
+.copy div:first-child{
+    width: 140px;
+}
+.copy div:first-child img {
+    width: 100%;
+}
+.copy div:nth-child(2){
+    width: 140px;
+    margin-left: 12px;
+}
+.copy div:nth-child(2) img{
+    width: 100%;
+}
+
+.copy div:nth-child(3){
+    width: 120px;
+    margin-top: 12px;
+    margin-left: 10px;
+}
+.copy div:nth-child(3) p {
+    font-size: 14px;
+    line-height: 18px;
+    color: #aaaaaa;
+}
+.copy div:last-child{
+    margin-top: 12px;
+   text-align: right;
+    width: 763px;
+}
+.copy div:last-child p{
+    font-size: 14px;
+    line-height: 18px;
+    color: #777777;
+}
+
+

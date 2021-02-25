@@ -1,0 +1,310 @@
+body {
+    background: #f7f7f7;
+}
+#lbt{
+    position: relative; 
+ 
+}
+.swiper-container {
+    width: 1920px;
+    margin: 0 auto;
+}
+
+.swiper-wrapper {
+    margin: 0 auto;
+}
+
+.swiper-slide img {
+    width: 1920px;
+    height: 500px;
+}
+
+.swiper-container>.swiper-pagination {
+    position: absolute;
+    width: 1188px;
+    height: 21px;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10px;
+    z-index: 20;
+    text-align: left;
+}
+
+.swiper-container>.swiper-button-prev, .swiper-container>.swiper-button-next {
+    width: 40px;
+    height: 72px;
+    line-height: 72px;
+    text-align: center;
+    background-color: rgba(11, 16, 16, .2);
+
+  
+}
+ /* .swiper-button-prev{
+    position: fixed;
+    left: 0;
+}
+.swiper-button-next{
+    position: fixed;
+    right: 0;
+} */
+
+
+/* content start */
+
+ .content h2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #1e1e1e;
+    line-height: 1em;
+    margin-top: 60px;
+}
+
+.section {
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.content1 {
+    width: 588px;
+    height: 296px;
+    float: left;
+}
+
+.content2, .content3-4 {
+    width: 294px;
+    height: 296px;
+    float: left;
+    margin-left: 6px;
+}
+
+.content4 {
+    margin-top: 6px;
+}
+
+img {
+    width: 100%;
+}
+
+/* 璀璨家电专区 */
+
+.item1 {
+    width: 198px;
+    height: 59.5px;
+    float: left;
+}
+
+.content5 {
+    height: 505.5px;
+}
+
+.pzjx {
+    width: 591px;
+    height: 912px;
+    float: left;
+}
+
+.pzjx-right {
+    margin-left: 6px;
+}
+
+.pzjx1, .pzjx4 {
+    height: 382px;
+}
+
+.pzjx2, .pzjx3 {
+    height: 524px;
+}
+
+.pzjx2, .pzjx4 {
+    margin-top: 6px;
+}
+
+/* 专区 */
+
+.see-more {
+    float: right;
+    width: 94px;
+    height: 27px;
+}
+
+.zq1, .zq2-3 {
+    width: 594px;
+    height: 600px;
+    float: left;
+}
+
+.zq2, .zq3 {
+    height: 300px;
+}
+
+.goods {
+    height: 374px;
+    margin-top: 30px;
+}
+
+.goods ul li {
+    width: 272px;
+    height: 346px;
+    padding: 8px;
+    margin: 0 0 12px 12px;
+    float: left;
+    background: #fff;
+}
+
+.goods ul li:hover {
+    box-shadow: 0 0 30px 2px #ccc;
+    transition: all 0.2s linear;
+}
+
+.goods ul li:first-child {
+    margin-left: 0px;
+}
+
+.goods ul li img {
+    width: 272px;
+    height: 272px;
+}
+
+.goods ul li h3 {
+    font-size: 14px;
+    color: #1e1e1e;
+    font-weight: 700;
+    line-height: 20px;
+    height: 20px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.goods ul li p {
+    font-size: 12px;
+    color: #777;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.goods ul li h4 {
+    font-size: 16px;
+    color: #cc0010;
+    line-height: 20px;
+    text-align: center;
+}
+
+/* 选购攻略 */
+
+.item2 {
+    width: 388px;
+    height: 324px;
+    margin-bottom: 12px;
+    float: left;
+    background: #fff;
+}
+
+.middle {
+    margin: 0 12px 12px 12px;
+}
+
+.xg1 img, .xg2 img, .xg3 img {
+    width: 388px;
+    height: 212px;
+}
+
+.item2 p {
+    font-size: 16px;
+    color: #262626;
+    text-align: left;
+    font-weight: 700;
+    height: 22px;
+    line-height: 22px;
+    margin-bottom: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.text {
+    padding: 24px 16px;
+    width: 388px;
+    height: 108px;
+
+}
+
+
+
+.text h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e1e1e;
+    line-height: 26px;
+    text-align: center;
+}
+
+.text h6 {
+    font-size: 14px;
+    color: #999;
+    line-height: 24px;
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+}
+
+.fw1, .fw2, .fw3, .fw4 {
+    width: 288px;
+    height: 120px;
+    margin-left: 12px;
+    float: left;
+}
+
+.fw1 {
+    margin-left: 0px;
+}
+
+.image1 {
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+
+.item2 .none{
+    display: none;
+    line-height: 20px;
+    margin-top: 12px;
+    text-align: left;
+    font-size: 14px;
+    color: #777;
+}
+.scale-big-box {
+    overflow: hidden;
+}
+.scale-big:hover {
+    transform: scale(1.1, 1.1);
+    transition: all 0.5s;
+}
+
+
+.item2:hover .hh{
+    width: 388px;
+    height:160px;
+    overflow: hidden;
+}
+.hh{
+    transition:2s all ;
+
+}
+.item2:hover .scale-big{
+    transform: scale(1.1, 1.1);
+    transition: all 0.5s;
+}
+.item2:hover .none{
+    display: block;
+}
+
+
+

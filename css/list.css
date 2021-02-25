@@ -1,0 +1,231 @@
+.list-content-wrap {
+    background: #f7f7f7;
+    overflow: hidden;
+}
+
+.list-content {
+    width: 1188px;
+    padding-bottom: 20px;
+    margin-top: 24px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.list-side {
+    width: 208px;
+    height: 974px;
+    padding: 20px 0 20px 20px;
+    margin-right: 12PX;
+    background: #fff;   
+}
+
+.list-side dl{
+    width: 208PX;
+    height: 60px;
+    margin: 14PX 0 20PX;
+
+}
+.list-side dl:first-child{
+    height: 300px;
+}
+.list-side dl dt{
+    width: 208PX;
+    height: 20PX;
+    font-weight: 800;
+    font-size: 14px;
+    color: #262626;
+    text-align: left;
+    line-height: 20px;
+}
+
+.list-side dl dd li{
+    float: left;
+    background: #f5f5f5;
+    font-size: 12px;
+    color: #262626;
+    line-height: 32px;
+    width: 90px;
+    height: 32px;
+    text-align: center;
+    margin: 8px 8px 0 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.list-filter {
+    width: 948px;
+    height: 40px;
+    background: #fff;
+    margin-bottom: 22PX;
+    position: relative;
+}
+
+.list-goods {
+    width: 948px;
+   
+}
+
+.displaychange {
+    float: right;
+}
+
+.filter-banner {
+    float: right;
+}
+
+.hisence-filter {
+    border: none;
+    position: absolute;
+    top: 0;
+    width: 380px;
+    padding: 0 10px;
+    color: #646464;
+    line-height: 40px;
+}
+
+.area {
+    font-size: 14px;
+    color: #aaa;
+    margin-right: 6px;
+}
+
+.select-groups {
+    display: inline-block;
+    padding: 0 8px;
+    position: relative;
+}
+.select-groups i{
+    font-size: 16px;
+    color: #ccc;
+    
+}
+
+.select-groups a {
+    font-size: 14px;
+    color: #262626;
+}
+
+#stock {
+    margin-right: 8px;
+}
+
+.hisence lable {
+    color: #262626;
+}
+
+.filter-banner span {
+    display: inline-block;
+    width: 68px;
+    text-align: left;
+    line-height: 40px;
+}
+
+
+
+
+.list1{
+    width: 1000px;
+}
+
+
+
+.list-goods ul li {
+    position: relative;
+    height: 330px;
+    width: 228px;
+    padding: 8px;
+    margin: 0 9px 12px 0;
+    margin:0 12px 12px 0;
+    border: none;
+    background: #fff;
+    transition: all 0.2S;
+    float: left;
+    box-sizing: border-box;
+}
+
+.list1{
+    overflow: hidden;
+}
+.produce-image img {
+    width: 212px;
+    height: 212px;
+}
+
+.produce-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.produce-title a {
+    color: #1e1e1e;
+    line-height: 20px;
+}
+
+.produce-title a:hover {
+    color: #00aaa6;
+    text-decoration: underline;
+}
+
+.produce-price {
+    line-height: 12px;
+    margin: 4px 0;
+    padding: 0 8px;
+}
+
+.currently {
+    font-size: 12px;
+    color: #ff143e;
+}
+
+.price {
+    font-size: 16px;
+    color: #ff143e;
+    line-height: 22px;
+}
+
+.salequantity {
+    font-size: 12px;
+    color: #aaa;
+    line-height: 22px;
+    font-weight: 400;
+    float: right;
+}
+.pagination{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  
+}
+.pagination div{
+    margin: 0 !important;
+    background-color: #fff !important; 
+
+}
+.page{
+    display: block;
+    margin-right: 20px;
+}
+ .prev{
+    border: 1px solid #ddd!important;
+    color: #646464;
+    
+}
+.next{
+    border: 1px solid #ddd!important;
+    color: #646464;
+
+}
+.pagination p{
+    margin: 0 !important;
+    border: 1px solid #ddd!important;
+    color: #1e1e1e;
+}
+.pagination p:hover{
+    color: #00aaa6;
+}

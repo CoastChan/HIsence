@@ -1,0 +1,293 @@
+body {
+    background: #f7f7f7;
+}
+
+.wrap {
+    width: 1188px;
+    margin: 0 auto;
+}
+
+.top {
+    width: 100%;
+}
+
+.top img {
+    width: 100%;
+}
+
+.nav-wrap {
+    background-color: #444;
+
+    height: 36px;
+}
+
+.nav a {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 36px;
+}
+
+.nav li a:hover {
+    color: #fff;
+}
+
+.nav-right li:first-child a:hover {
+    color: #0277bd;
+}
+
+.nav-right li:nth-child(2):hover {
+    color: #0277bd;
+}
+
+.nav-right {
+    float: right;
+}
+
+.nav ul li {
+    float: left;
+    padding: 0 12px;
+}
+
+/* header start */
+
+.header-wrap {
+    width: 100%;
+    background: #fff;
+    position: relative;
+
+}
+
+.header {
+    /* width: 100%; */
+    height: 64px;
+    line-height: 64px!important;
+    overflow: hidden;
+   
+    /* position: relative; */
+  
+}
+
+.logo {
+    width: 152px;
+    float: left;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.search-box{
+    width: 100%;
+    position: relative;
+    /* overflow: hidden; */
+}
+.search{
+    float: right;
+    width: 950px;
+    line-height: 65px;
+    position: absolute;
+    left: 1164px;
+    transition: all 1s ;
+   
+}
+.search input{
+width: 836px;
+padding:7px 10px;
+}
+.search .ssk{
+    color: #000;
+    font-weight: 900;
+    font-size: 24px;
+}
+
+.menu {
+    float: left;
+
+}
+/* .menu ul{
+    width: 1026px;
+} */
+
+.menu ul li {
+    float: left;
+    padding: 0 18px;
+}
+
+.menu ul li a {
+    list-style: none;
+    font-size: 16px;
+    color: #333;
+    line-height: 65px;
+}
+
+.menu li a:hover {
+    color: #0277bd!important;
+}
+
+.menu ul li:nth-child(2) {
+    position: relative;
+}
+
+.menu ul li:nth-child(2) i {
+    position: absolute;
+    right: -8px;
+    top: -18px;
+}
+
+.search .icon-X{
+    font-size: 16px;
+    color: #ccc;
+    margin: 13px 20px 0 10px
+}
+.dbtl ul li i {
+    font-size: 24px;
+}
+
+.dbtl ul li span {
+    display: block;
+    font-size: 12px;
+    line-height: 24px;
+    color: #1e1e1e;
+}
+
+.dbtl ul li:first-child span {
+    color: #00aaa6;
+}
+
+.dbtl ul li {
+    width: 54px;
+    height: 64px;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: solid 1px #eee;
+    box-sizing: border-box;
+}
+
+.dbtl ul {
+    list-style: none;
+    position: fixed;
+    right: 0;
+    bottom: 20%;
+    padding: 0 7px;
+    z-index: 999;
+    background: #fff;
+}
+
+
+.goods-info {
+    position: absolute;
+    width: 100%;
+    
+    left: 0;
+    top: 64px;
+    height: 290px;
+    background-color: #f7f7f7;
+    border-top: solid 1px rgb(224, 224, 224);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+    transition: all 2s;
+    display: none;
+    z-index: 9999;
+}
+
+
+/* .show:hover~.goods-info, .goods-info:hover {
+    display: block;
+} */
+
+.a:hover .a1,.b:hover .b1,.c:hover .c1,
+.d:hover .d1,.e:hover .e1,.f:hover .f1,
+.g:hover .g1,.h:hover .h1,.j:hover .j1, 
+.k:hover .k1, .l:hover .l1{
+    display: block;
+}
+
+
+
+/*  */
+
+.ds-info-left {
+    width: 800px;
+    height: 290px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    font-size: 12px;
+    padding-top: 20px;
+    
+    
+
+
+}
+
+.ds-info-left li {
+    box-sizing: border-box;
+    float: left;
+    width: 188px;
+    height: 44px;
+    margin-bottom: 24px;
+    
+}
+
+.ds-info-left li a img {
+    width: 44px;
+    height: 44px;
+}
+
+.ds-info-left li span {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 12px;
+    line-height: 44px;
+    font-size: 16px;
+}
+
+
+
+
+
+.ds-info-right {
+    padding-top: 10px;
+    margin-top: -4px;
+    width: 364px;
+    height: 290px;
+    float: right;
+}
+
+.ds-info-right li {
+    width: 176px;
+    height: 130px;
+    box-sizing: border-box;
+    padding: 20px 8px;
+    margin-top: 4px;
+    margin-left: 4px;
+    text-align: center;
+    background: #fff;
+    float: left;
+}
+
+.ds-info-right .imgbox {
+    width: 164px;
+    height: 80px;
+    overflow: hidden;
+}
+
+.ds-info-right .imgbox img {
+    width: 80px;
+    height: 80px;
+}
+
+.ds-info-right .name {
+    color: #646464;
+    font-size: 14px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ds-info-right .currency {
+    font-size: 16px;
+    color: #ff143e;
+    font-family: PingFangSC-Regular;
+    line-height: 16px;
+}

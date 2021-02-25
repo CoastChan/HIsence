@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrap {
+    width: 1188px;
+    margin: 0 auto;
+}
+
+.header-wrap {
+    height: 80px;
+}
+
+.header {
+    height: 65px;
+}
+
+.header .logo {
+    float: left;
+    width: 152px;
+    height: 45px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.header .logo img {
+    width: 100%;
+}
+
+.header .txt {
+    float: left;
+    width: 287.75px;
+    height: 45xp;
+    margin-top: 20px;
+}
+
+.header .txt p {
+    font-size: 20px;
+    line-height: 45px;
+    color: #333;
+}
+
+.section-wrap {
+    background: url(../img/login.bg.jpg) no-repeat center 0px;
+    background-size: auto 680px;
+    height: 730px;
+    margin-top: 40px;
+}
+
+.section {
+    height: 680px;
+    position: relative;
+}
+
+.section .login {
+    width: 384px;
+    height: 560px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    background-color: #fff;
+    position: absolute;
+    right: 40px;
+    top: 0;
+}
+
+.login-bar {
+    position: relative;
+}
+
+.login-bar i {
+    font-size: 60px;
+    color: #ddd;
+    line-height: 60px;
+    position: absolute;
+    top: 0;
+    right: 30px;
+    width: 60px;
+    z-index: 10;
+}
+
+.sm:hover i {
+    color: #00aaa6;
+}
+
+.login-bar i::before {
+    content: '';
+    display: block;
+    border: 70px solid #fff;
+    border-top: none;
+    border-left: none;
+    border-right-color: transparent;
+    position: absolute;
+    top: -10px;
+    left: 19px;
+}
+
+.sm {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 0;
+}
+
+.login-bar ul {
+    list-style-type: none;
+    width: 384px;
+    height: 64px;
+    margin-top: 14px;
+    border-bottom: solid 1px #eee;
+}
+
+.login-bar ul li a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    color: #aaa;
+    height: 64px;
+    line-height: 64px;
+}
+
+.login-bar ul li:first-child a {
+    color: #00aaa6;
+    border-bottom: solid 2px #00aaa6;
+}
+
+.login-bar li {
+    width: 192px;
+    float: left;
+    height: 64px;
+    text-align: center;
+}
+
+.top1 {
+    position: relative;
+    z-index: 20;
+    left: -2px;
+    background-color: transparent;
+}
+
+.empty {
+    width: 384px;
+    height: 40px;
+    padding: 0 48px
+}
+
+/*  */
+
+.login-content {
+    padding: 20px 48px 0;
+}
+
+#login-name, #login-password {
+    margin-bottom: 36px;
+    position: relative;
+}
+
+#login-name span, #login-password span {
+    font-size: 16px;
+    color: #262626;
+    line-height: 40px;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 0.8s;
+}
+
+#login-password i {
+    font-size: 20px;
+    line-height: 40px;
+    cursor: point;
+    position: absolute;
+    right: 0;
+    z-index: 100;
+}
+
+.bdyz1, .bdyz2 {
+    color: #F26522;
+    margin-top: 5px;
+}
+
+.error-empty {
+    position: absolute;
+    left: 0;
+    top: 50PX;
+    font-size: 12PX;
+    color: #F26522;
+    display: none;
+}
+
+input:-internal-autofill-selected {
+    background-color: #fff !important;
+}
+
+input[type="text"], input[type="password"] {
+    width: 288px;
+    height: 40px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    position: relative;
+    padding-left: 0;
+    z-index: 3;
+}
+
+.login-content .keep-groud {
+    width: 288px;
+    height: 14px;
+    margin: 24px 0 36px;
+    font-size: 12px;
+    color: #1e1e1e;
+}
+
+.login-content .keep-groud a {
+    float: right;
+}
+
+.login-content .keep-groud .reg {
+    margin-left: 16px;
+    color: #00aaa6;
+}
+
+.login-content .control-groud {
+    width: 288px;
+    height: 100px;
+    margin: 6px 0 4px;
+}
+
+button[type="submit"] {
+    width: 266px;
+    height: 40px;
+    padding: 9px 10px;
+    border: 1px solid #ddd;
+    background-color: #00aaa6;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-content .control-groud a {
+    display: block;
+    width: 266px;
+    height: 38px;
+    color: #262626;
+    line-height: 38px;
+    border: solid 1px #ddd;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-footer {
+    width: 288px;
+    height: 94px;
+    padding: 16px 48px 24px;
+    text-align: center;
+}
+
+.login-footer p {
+    width: 288px;
+    height: 16px;
+    font-size: 12px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.login-footer a {
+    color: #ddd;
+}
+
+.login-footer a:last-child {
+    padding: 0 10px;
+}
+
+.footer {
+    height: 90px;
+}
+
+.footer p {
+    font-size: 14px;
+    color: #646464;
+    text-align: center;
+    line-height: 90px;
+}
