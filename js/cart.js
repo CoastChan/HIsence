@@ -1,36 +1,36 @@
-window.onload=function(){
-//获取账户cookie
-var name1 = getCookie("user")
-//获取大盒子对象
-var box = document.querySelector(".cart-box")
-//获取地址栏中的地址
-var url = location.href
-//获取localstorage中的cartlist1
-var cartList = localStorage.getItem('cartList1')
-//把当前cartlist字符串转为数组对象
-cartList = JSON.parse(cartList) || []
+window.onload = function () {
+    //获取账户cookie
+    var name1 = getCookie("user")
+    //获取大盒子对象
+    var box = document.querySelector(".cart-box")
+    //获取地址栏中的地址
+    var url = location.href
+    //获取localstorage中的cartlist1
+    var cartList = localStorage.getItem('cartList1')
+    //把当前cartlist字符串转为数组对象
+    cartList = JSON.parse(cartList) || []
 
-//判断当前cookie是否存在
-if (name1) {
-    show()
-} else {
-    alert("你还没登录，请登录再进入")
-    location = "../pages/login.html?pathurl=" + url
-}
+    //判断当前cookie是否存在
+    if (name1) {
+        show()
+    } else {
+        alert("你还没登录，请登录再进入")
+        location = "../pages/login.html?pathurl=" + url
+    }
 
 
-function show() {
+    function show() {
 
-    //判断当前localstorage中是否有内容
-    if (cartList.length > 0) {
-        //获取全选框是否被选中
-        var aa = cartList.every(item => {
-            //判断当前商品是否被选中
-            return item.is_select == 1
-        })
-        //获取当前被选中商品的种类和价格
-        var sum = total()
-        var str2 = `
+        //判断当前localstorage中是否有内容
+        if (cartList.length > 0) {
+            //获取全选框是否被选中
+            var aa = cartList.every(item => {
+                //判断当前商品是否被选中
+                return item.is_select == 1
+            })
+            //获取当前被选中商品的种类和价格
+            var sum = total()
+            var str2 = `
      <table class="shopping-cart-table">
         <thead>
             <tr>
@@ -59,9 +59,9 @@ function show() {
         </thead>
         <tbody>
         `
-        //遍历数组中所有的商品
-        cartList.forEach(item => {
-            str2 += `
+            //遍历数组中所有的商品
+            cartList.forEach(item => {
+                str2 += `
             
             <tr>
                 <td>
@@ -94,8 +94,8 @@ function show() {
             </tr>
           
             `
-        })
-        str2 += `
+            })
+            str2 += `
             </tbody>
             </table>
         <div class="shopping-cart-foot">
@@ -123,14 +123,14 @@ function show() {
             </div>
         </div>
             `
-        //把最后拼接好的内容添加到box大盒子中
-        box.innerHTML = str2
+            //把最后拼接好的内容添加到box大盒子中
+            box.innerHTML = str2
 
 
 
 
-    } else {
-        var str1 = `
+        } else {
+            var str1 = `
      <div class="cart-empty">
      <div class="empty-img">
          <img src="../img/cart-empty.png">
@@ -140,108 +140,120 @@ function show() {
          <a href="../pages/list.html">马上去购物</a>
      </div>
      `
-        //把当前内容添加到box盒子中
-        box.innerHTML = str1
-    }
-}
-
-//给box大盒子对象绑定一个点击事件
-box.onclick = function (e) {
-    var e = e || window.event
-
-    //获取点击对象
-    var target = e.target || e.srcElement
-    //判断当前点击的是否为＋按钮
-    if (target.value == "+") {
-
-        //获取当前对象中的id属性
-        var id = target.getAttribute("data-id")
-        //遍历cartlist数组对象
-        cartList.forEach(item => {
-            //判断遍历出来的商品是否为当前操作商品
-            if (item.id == id) {
-                item.number++
-            }
-        })
-        //重新把当前操作完毕的数组添加到localstorage中
-        localStorage.setItem("cartList1", JSON.stringify(cartList))
-        //调用show方法，重新把页面再次渲染
-        show()
-    }
-    if (target.value == "-") {
-        //获取当前对象中的id属性
-        var id = target.getAttribute("data-id")
-        //遍历cartlist数组对象
-        cartList.forEach(item => {
-            //判断遍历出来的商品是否为当前操作商品
-            if (item.id == id) {
-                item.number--
-            }
-        })
-        //重新把当前操作完毕的数组添加到localstorage中
-        localStorage.setItem("cartList1", JSON.stringify(cartList))
-        //调用show方法，重新把页面再次渲染
-        show()
-    }
-    //删除
-    if (target.innerHTML == "删除") {
-        //获取当前点击对象的id
-        var id = target.getAttribute("data-id")
-        cartList = cartList.filter(item => {
-            //过滤被删除的shangp
-            return item.id != id
-        })
-        //重新把当前操作完毕的数组添加到localstorage中
-        localStorage.setItem("cartList1", JSON.stringify(cartList))
-        //调用show方法，重新把页面再次渲染
-        show()
+            //把当前内容添加到box盒子中
+            box.innerHTML = str1
+        }
     }
 
+    //给box大盒子对象绑定一个点击事件
+    box.onclick = function (e) {
+        var e = e || window.event
 
-    //全选
-    if (target.name == "quan") {
+        //获取点击对象
+        var target = e.target || e.srcElement
+        //判断当前点击的是否为＋按钮
+        if (target.value == "+") {
 
-        //遍历所有商品
-        cartList.forEach(item => {
-            //判断当前全选框是否被选中
-            if (target.checked) {
-                item.is_select = 1
-            } else {
-                item.is_select = 0
-            }
-        })
-        //重新把当前操作完毕的数组添加到localstorage中
-        localStorage.setItem("cartList1", JSON.stringify(cartList))
-        //调用show方法，重新把页面再次渲染
-        show()
-    }
-
-    //选中框
-    if (target.name == "xuan") {
-        //获取当前商品对应的id
-        var id = target.getAttribute('data-id')
-        //遍历数组中所有的商品对象
-        cartList.forEach(item => {
-            if (item.id == id) {
-                //判断当前选中框是否被选中
-                if (item.is_select == 1) {
-                    item.is_select = 0
-                } else {
-                    item.is_select = 1
+            //获取当前对象中的id属性
+            var id = target.getAttribute("data-id")
+            //遍历cartlist数组对象
+            cartList.forEach(item => {
+                //判断遍历出来的商品是否为当前操作商品
+                if (item.id == id) {
+                    item.number++
                 }
-            }
-        })
-        //重新把当前操作完毕的数组添加到localstorage中
-        localStorage.setItem("cartList1", JSON.stringify(cartList))
-        //调用show方法，重新把页面再次渲染
-        show()
-    }
+            })
+            //重新把当前操作完毕的数组添加到localstorage中
+            localStorage.setItem("cartList1", JSON.stringify(cartList))
+            //调用show方法，重新把页面再次渲染
+            show()
+        }
+        if (target.value == "-") {
+            //获取当前对象中的id属性
+            var id = target.getAttribute("data-id")
+            //遍历cartlist数组对象
+            cartList.forEach(item => {
+                //判断遍历出来的商品是否为当前操作商品
+                if (item.id == id) {
+                    item.number--
+                }
+            })
+            //重新把当前操作完毕的数组添加到localstorage中
+            localStorage.setItem("cartList1", JSON.stringify(cartList))
+            //调用show方法，重新把页面再次渲染
+            show()
+        }
+        //删除
+        if (target.innerHTML == "删除") {
+            //获取当前点击对象的id
+            var id = target.getAttribute("data-id")
+            cartList = cartList.filter(item => {
+                //过滤被删除的shangp
+                return item.id != id
+            })
+            //重新把当前操作完毕的数组添加到localstorage中
+            localStorage.setItem("cartList1", JSON.stringify(cartList))
+            //调用show方法，重新把页面再次渲染
+            show()
+        }
 
-    //去结算
-    if (target.innerHTML == "去结算") {
-        //添加确认框
-        if (confirm("你确定要购买吗？")) {
-            alert("你需要支付：￥" + total()[1])
+
+        //全选
+        if (target.name == "quan") {
+
+            //遍历所有商品
+            cartList.forEach(item => {
+                //判断当前全选框是否被选中
+                if (target.checked) {
+                    item.is_select = 1
+                } else {
+                    item.is_select = 0
+                }
+            })
+            //重新把当前操作完毕的数组添加到localstorage中
+            localStorage.setItem("cartList1", JSON.stringify(cartList))
+            //调用show方法，重新把页面再次渲染
+            show()
+        }
+
+        //选中框
+        if (target.name == "xuan") {
+            //获取当前商品对应的id
+            var id = target.getAttribute('data-id')
+            //遍历数组中所有的商品对象
+            cartList.forEach(item => {
+                if (item.id == id) {
+                    //判断当前选中框是否被选中
+                    if (item.is_select == 1) {
+                        item.is_select = 0
+                    } else {
+                        item.is_select = 1
+                    }
+                }
+            })
+            //重新把当前操作完毕的数组添加到localstorage中
+            localStorage.setItem("cartList1", JSON.stringify(cartList))
+            //调用show方法，重新把页面再次渲染
+            show()
+        }
+
+        //去结算
+        if (target.innerHTML == "去结算") {
+            //添加确认框
+            if (confirm("你确定要购买吗？")) {
+                alert("你需要支付：￥" + total()[1])
+                cartList = cartList.filter(item => {
+                    return item.is_select != 1
+                })
+                //重新把当前操作完毕的数组添加到localstorage中
+                localStorage.setItem("cartList1", JSON.stringify(cartList))
+                //调用show方法，重新把页面再次渲染
+                show()
+            }
+        }
+
+        //删除选中商品
+        if (target.innerHTML == "删除选中商品") {
             cartList = cartList.filter(item => {
                 return item.is_select != 1
             })
@@ -250,37 +262,26 @@ box.onclick = function (e) {
             //调用show方法，重新把页面再次渲染
             show()
         }
+
     }
 
-    //删除选中商品
-    if (target.innerHTML == "删除选中商品") {
-        cartList = cartList.filter(item => {
-            return item.is_select != 1
+
+
+
+    //统计所选商品数量和价格
+    function total() {
+        var num = 0//所选商品种类
+        var price = 0 //所选商品总价格
+        //遍历cartlist数组对象
+        cartList.forEach(item => {
+            //判断当前商品是否被选中
+            if (item.is_select == 1) {
+                num++
+                price += item.number * item.price
+
+            }
         })
-         //重新把当前操作完毕的数组添加到localstorage中
-    localStorage.setItem("cartList1", JSON.stringify(cartList))
-    //调用show方法，重新把页面再次渲染
-    show()
+        return [num, price]
     }
-   
-}
 
-
-
-
-//统计所选商品数量和价格
-function total() {
-    var num = 0//所选商品种类
-    var price = 0 //所选商品总价格
-    //遍历cartlist数组对象
-    cartList.forEach(item => {
-        //判断当前商品是否被选中
-        if (item.is_select == 1) {
-            num++
-            price += item.number * item.price
-
-        }
-    })
-    return [num, price]
-}
 }

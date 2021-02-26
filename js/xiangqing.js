@@ -16,9 +16,9 @@ window.onload = function () {
                 url: '../php/xiangqing.php',
                 data: 'id=' + id,
                 datatype: 'json'
-              
+
             })
-           
+
             //创建拼接所有内容的字符串
             var str = `
         <div class="xiangqing-wrap">
@@ -131,12 +131,16 @@ window.onload = function () {
                     </div>
                     <div class="address-select">
                         <div>
-                            <a href="#">
-                                <span>山东</span>
-                                <span>青岛市</span>
-                                <span>市南区</span>
-                            </a>
-                            <span class="address-reset">修改</span>
+                            <select name="province">
+                                <option value="请选择省">请选择省</option>
+                            </select>
+                             <select name="city">
+                                <option value="请选择市">请选择市</option>
+                            </select>
+                             <select name="area">
+                                <option value="请选择区">请选择区</option>
+                             </select>
+                          
                         </div>
                         <div class="instock">现货</div>
                     </div>
@@ -287,16 +291,16 @@ window.onload = function () {
                     'display': 'none'
                 })
             })
-            
-             //给下面五张小图片绑定点击事件
 
-             $('.carousel-container li').click(function(){
+            //给下面五张小图片绑定点击事件
+
+            $('.carousel-container li').click(function () {
                 $(this).removeClass('imgborder')
-                 $(this).addClass('imgborder')
-                $(".box img").attr("src",$(this).find('img').attr("src"))
-                $(".boxRight img").attr("src",$(this).find('img').attr("src"))
-                
-             })
+                $(this).addClass('imgborder')
+                $(".box img").attr("src", $(this).find('img').attr("src"))
+                $(".boxRight img").attr("src", $(this).find('img').attr("src"))
+
+            })
         })()
 
 
@@ -329,11 +333,11 @@ window.onload = function () {
                 //遍历数组中所有元素
                 cartList.forEach(item => {
                     //判断当前遍历的商品是否等于要添加的商品
-                   
+
                     if (item.id == dt.id) {
                         a++
                         item.number = parseInt(item.number) + parseInt($("input[type='text']").eq(1).val())
-                       
+
                     }
 
                 })

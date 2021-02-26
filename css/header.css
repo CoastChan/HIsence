@@ -128,7 +128,7 @@ padding:7px 10px;
     position: relative;
 }
 
-.menu ul li:nth-child(2) i {
+.menu>ul>li:nth-child(2) i {
     position: absolute;
     right: -8px;
     top: -18px;
