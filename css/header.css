@@ -17,7 +17,6 @@ body {
 
 .nav-wrap {
     background-color: #444;
-
     height: 36px;
 }
 
@@ -54,7 +53,6 @@ body {
     width: 100%;
     background: #fff;
     position: relative;
-
 }
 
 .header {
@@ -62,9 +60,7 @@ body {
     height: 64px;
     line-height: 64px!important;
     overflow: hidden;
-   
     /* position: relative; */
-  
 }
 
 .logo {
@@ -76,34 +72,45 @@ body {
     width: 100%;
 }
 
-.search-box{
+.search-box {
     width: 100%;
     position: relative;
     /* overflow: hidden; */
 }
-.search{
+
+.search {
     float: right;
     width: 950px;
+    height: 65px;
     line-height: 65px;
     position: absolute;
     left: 1164px;
-    transition: all 1s ;
-   
+    transition: all 1s;
 }
-.search input{
-width: 836px;
-padding:7px 10px;
+
+.search input {
+    width: 836px;
+    padding: 0px 10px;
+    line-height: 65px;
+    vertical-align: top;
 }
-.search .ssk{
+
+.search .ssk {
     color: #000;
     font-weight: 900;
     font-size: 24px;
 }
 
+.search .icon-X {
+    font-size: 16px;
+    color: #ccc;
+    margin: 13px 20px 0 10px
+}
+
 .menu {
     float: left;
-
 }
+
 /* .menu ul{
     width: 1026px;
 } */
@@ -134,11 +141,6 @@ padding:7px 10px;
     top: -18px;
 }
 
-.search .icon-X{
-    font-size: 16px;
-    color: #ccc;
-    margin: 13px 20px 0 10px
-}
 .dbtl ul li i {
     font-size: 24px;
 }
@@ -173,11 +175,9 @@ padding:7px 10px;
     background: #fff;
 }
 
-
 .goods-info {
     position: absolute;
     width: 100%;
-    
     left: 0;
     top: 64px;
     height: 290px;
@@ -189,19 +189,13 @@ padding:7px 10px;
     z-index: 9999;
 }
 
-
 /* .show:hover~.goods-info, .goods-info:hover {
     display: block;
 } */
 
-.a:hover .a1,.b:hover .b1,.c:hover .c1,
-.d:hover .d1,.e:hover .e1,.f:hover .f1,
-.g:hover .g1,.h:hover .h1,.j:hover .j1, 
-.k:hover .k1, .l:hover .l1{
+.a:hover .a1, .b:hover .b1, .c:hover .c1, .d:hover .d1, .e:hover .e1, .f:hover .f1, .g:hover .g1, .h:hover .h1, .j:hover .j1, .k:hover .k1, .l:hover .l1 {
     display: block;
 }
-
-
 
 /*  */
 
@@ -213,10 +207,6 @@ padding:7px 10px;
     overflow: hidden;
     font-size: 12px;
     padding-top: 20px;
-    
-    
-
-
 }
 
 .ds-info-left li {
@@ -225,7 +215,6 @@ padding:7px 10px;
     width: 188px;
     height: 44px;
     margin-bottom: 24px;
-    
 }
 
 .ds-info-left li a img {
@@ -240,10 +229,6 @@ padding:7px 10px;
     line-height: 44px;
     font-size: 16px;
 }
-
-
-
-
 
 .ds-info-right {
     padding-top: 10px;

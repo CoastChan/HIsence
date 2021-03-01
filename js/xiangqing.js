@@ -295,8 +295,10 @@ window.onload = function () {
             //给下面五张小图片绑定点击事件
 
             $('.carousel-container li').click(function () {
-                $(this).removeClass('imgborder')
+                $('.carousel-container li').removeClass('imgborder')
                 $(this).addClass('imgborder')
+            
+                
                 $(".box img").attr("src", $(this).find('img').attr("src"))
                 $(".boxRight img").attr("src", $(this).find('img').attr("src"))
 

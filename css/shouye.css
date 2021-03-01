@@ -1,16 +1,13 @@
 body {
     background: #f7f7f7;
 }
-#lbt{
-    position: relative; 
- 
-}
+
 .swiper-container {
-    width: 1920px;
-    margin: 0 auto;
+   position: relative;
 }
 
 .swiper-wrapper {
+    width: 1920px;
     margin: 0 auto;
 }
 
